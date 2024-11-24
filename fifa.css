@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+
+    & a:link {
+        color: #333;
+    }
+
+    & a:visited {
+        color: #333;
+    }
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+
+.navbar img {
+    height: 50px;
+    width: 50px;
+    margin: 0 10px;
+    transition: transform 0s ease, box-shadow 0.6s ease, filter 0.6s ease;
+}
+
+.navbar img:hover {
+    animation: rotateBack 0.6s ease forwards;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.2);
+}
+
+@keyframes rotateBack {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    25% {
+        transform: scale(1.2) rotate(15deg);
+    }
+
+    50% {
+        transform: scale(1.2) rotate(0deg);
+    }
+
+    75% {
+        transform: scale(1.2) rotate(15deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.heading {
+    background-color: rgb(255, 193, 7);
+    position: relative;
+
+}
+
+.logo-img {
+    background-color: rgb(255, 193, 7);
+    height: 4.5em;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.logo-img:hover {
+    transform: rotate(360deg);
+
+}
+
+.navbar-pages {
+    background-color: rgb(255, 193, 7);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: -0.1em;
+    z-index: 3;
+    justify-content: space-around;
+}
+
+.navbar-pages a:hover {
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+}
+
+.footer-social {
+    margin: 0;
+    padding-top: 1em;
+    background-color: rgb(255, 193, 7);
+    height: 15em;
+}
+
+.footer-container {
+    margin-top: 0;
+    background-color: rgb(255, 193, 7);
+
+    & h1 {
+        margin: 0;
+    }
+}
+
+/*fifa page*/
+.fifa-picture {
+    border-radius: 1em;
+    position: relative;
+    width: 30em;
+    height: 38em;
+}
+
+.fifa-product-page {
+    background-color: antiquewhite;
+    color: #333;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4em;
+}
+
+.fifa-product-page button {
+    background-color: #333;
+    color: antiquewhite;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 13em;
+    border-radius: 1em;
+    height: 4em;
+
+}
+
+
+.fifa-product-page img {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.review-fifa {
+    padding: 0;
+    margin: 0;
+    width: max-content;
+}
+
+
+.grid-state {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.grid-state h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grid-table {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+.grid-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+
+.footer-social {
+    margin: 0;
+    padding: 1em 4em;
+    background-color: rgb(255, 193, 7);
+    height: 15em;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0px;
+    }
+
+    .navbar img {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.5em;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .navbar :nth-child(6),
+    .navbar :nth-child(7),
+    .navbar :nth-child(8),
+    .navbar :nth-child(9) {
+        display: none;
+    }
+
+    .navbar {
+        height: 5em;
+    }
+
+    .fifa-product-page {
+        height: 110em;
+    }
+
+    svg {
+        height: 15px;
+        width: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    svg {
+        height: 10px;
+        width: 10px;
+    }
+
+    .navbar :nth-child(5),
+    .navbar :nth-child(6),
+    .navbar :nth-child(7),
+    .navbar :nth-child(8),
+    .navbar :nth-child(9) {
+        display: none;
+    }
+}
